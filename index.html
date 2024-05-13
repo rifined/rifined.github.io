@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max Velocity's Race Schedule</title>
+    <link rel="stylesheet" href="schedulestyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="hd"><h1>Max Velocity's Race Schedule</h1></div>
+
+    <div id="info">
+        <div id="input">
+            <form id="questions">
+                <h2>Your Name:</h2>
+                <input type="text" name="username" id="username">
+
+                <h2>Day of the Week:</h2>
+                <input type="text" name="day" id="day">  
+
+                <p id="suber"><input type="submit" value="Submit" id="sub"></p>
+            </form>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#questions').on('submit', function(e){
+                e.preventDefault();
+                var username = $('#username').val();
+                var day = $('#day').val();
+                $.ajax({
+                    type: "POST",
+                    url: 'schedule.php',
+                    data: {username: username, day: day},
+                    success: function(data){
+                         $( "#output" ).html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
