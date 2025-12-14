@@ -1,0 +1,462 @@
+/* ===== Общие настройки страницы проекта ===== */
+
+:root {
+  --project-max-width: 1200px;
+  --project-gutter: 32px;
+  --project-radius: 24px;
+  --project-shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* базовая сетка уже есть в base/layout — здесь только отступы */
+
+.project-page {
+  max-width: var(--project-max-width);
+  margin: 0 auto;
+  padding: 96px 24px 0px;
+  font-family: "IBM Plex Mono", Menlo, SFMono-Regular, monospace;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.project-back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.project-back-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== HERO ===== */
+
+.project-hero {
+  margin-bottom: 72px;
+}
+
+.project-hero-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 42px;
+  letter-spacing: 0.06em;
+}
+
+.project-year {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+}
+
+.project-lede {
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.project-meta-grid {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  max-width: 640px;   /* ширина правого блока */
+  margin-left: auto;  /* прижать к правому краю */
+}
+
+.project-meta-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
+  column-gap: 24px;
+  align-items: end;     /* важное изменение — выравнивание по нижней линии */
+  font-size: 16px;      /* было 14 */
+  line-height: 1.2;     /* плотнее — чтобы линия была ближе */
+}
+
+.project-meta-row + .project-meta-row {
+  margin-top: 8px;
+}
+
+.project-meta-label {
+  color: #777;
+  font-family: "Truin", "Times New Roman", serif;
+  
+}
+
+.project-meta-line {
+  height: 1px;
+  background: #000;
+  align-self: end;        /* ← прижать к нижней линии текста */
+  margin-bottom: 2px;     /* ← немного воздуха */
+}
+
+.project-meta-value {
+  text-align: right;
+}
+
+/* Отступ после карусели */
+.hero-coverflow-meta {
+  margin-bottom: 96px;
+}
+
+/* баннер */
+
+.project-banner-wrapper {
+  margin-top: 40px;
+}
+
+.project-banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: var(--project-shadow-soft);
+}
+
+/* ===== ABOUT + PERSONAS (две колонки) ===== */
+
+.project-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+  column-gap: 64px;
+  row-gap: 64px;
+  margin-bottom: 96px;
+}
+
+.project-section-header,
+.project-styleguide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+.section-index {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 22px;
+}
+
+.project-about-block + .project-about-block {
+  margin-top: 24px;
+}
+
+.project-subhead {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.project-about-block p {
+  max-width: 44rem;
+}
+
+/* PERSONAS */
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 16px;
+}
+
+/* стеклянные подножки, как под иконками на главной */
+.persona-card {
+  padding: 24px 28px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+
+  transition:
+    backdrop-filter 0.35s cubic-bezier(.25,.46,.45,.94),
+    -webkit-backdrop-filter 0.35s cubic-bezier(.25,.46,.45,.94),
+    transform 0.35s cubic-bezier(.25,.46,.45,.94),
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.persona-card:hover {
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transform: scale(1.05) translateY(-2px); /* shrink + Y shift */
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08),
+              0 2px 8px rgba(0,0,0,0.05);
+}
+
+.persona-title {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.persona-title {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* ===== STYLEGUIDE / COLORS ===== */
+
+.project-styleguide {
+  margin-bottom: 96px;
+  grid-column: 1 / -1;
+}
+
+.styleguide-subtitle {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.styleguide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  grid-auto-rows: minmax(0, auto);
+  gap: 32px 64px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.color-card {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+/* TOOLS */
+.project-tools {
+  margin-bottom: 96px;
+  grid-column: 1 / -1;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.8);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.color-swatch {
+  width: 110px;
+  height: 140px;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.color-swatch-orange {
+  background: #fe470d;
+}
+
+.color-swatch-white {
+  background: #ffffff;
+}
+
+.color-swatch-black {
+  background: #000000;
+}
+
+.color-meta {
+  font-size: 14px;
+}
+
+.color-name {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.color-hex,
+.color-rgb {
+  font-size: 13px;
+}
+
+/* ===== PROJECT NAV (NEXT/PREV) ===== */
+.project-nav {
+  max-width: var(--project-max-width);
+  margin: 0 auto 110px;
+  padding: 12px 0 0;
+}
+
+.project-nav-inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-nav-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid #000;
+  border-radius: 14px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  text-decoration: none;
+  color: inherit;
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.project-nav-card:hover {
+  transform: translateY(-4px);
+  border-color: #fe470d;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  background: linear-gradient(135deg, rgba(254, 72, 12, 0.12), rgba(0, 0, 0, 0.03));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.project-nav-thumb {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  flex-shrink: 0;
+}
+
+.project-nav-thumb-bg {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.project-nav-thumb img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.project-nav-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-nav-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.project-nav-title {
+  font-family: "Truin", "Times New Roman", serif;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.project-nav-year {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+}
+
+.project-nav-arrow {
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.project-nav-prev {
+  justify-content: flex-start;
+}
+
+.project-nav-next {
+  justify-content: flex-start;
+}
+
+/* ===== RESPONSIVE (только project layout) ===== */
+
+@media (max-width: 1024px) {
+  .project-page {
+    padding-inline: 16px;
+  }
+
+  .project-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-hero-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .section-index {
+    font-size: 18px;
+  }
+
+  .project-nav-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .styleguide-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ===== FADE-IN анимация для блоков проекта ===== */
+/* ключевые кадры fadeUpSoft уже объявлены в layout.css */
+
+.project-hero,
+.hero-coverflow {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* по очереди, с небольшим сдвигом по времени */
+.project-hero {
+  animation: fadeUpSoft 0.7s ease-out 0.15s forwards;
+}
+
+.hero-coverflow {
+  animation: fadeUpSoft 0.7s ease-out 0.30s forwards;
+}

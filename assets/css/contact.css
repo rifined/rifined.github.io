@@ -1,0 +1,330 @@
+/* CONTACT PAGE */
+.contact-page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px 36px 60px;
+}
+
+.contact-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 12px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.contact-hero-text h1 {
+  font-family: "Truin", serif;
+  font-size: clamp(36px, 5vw, 52px);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.contact-hero-text p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 680px;
+  margin-bottom: 18px;
+}
+
+.contact-kicker {
+  color: rgba(0,0,0,0.5);
+  font-family: "Truin", monospace;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.contact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #000;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.pill-light {
+  border-color: rgba(0,0,0,0.25);
+  color: rgba(0,0,0,0.75);
+}
+
+.contact-hero-card {
+  max-height: 340px;
+  align-self: start;
+  margin-top: 12px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 38px rgba(0,0,0,0.16);
+  background: linear-gradient(135deg, rgba(254,72,12,0.05), rgba(0,0,0,0.02));
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-hero-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #000;
+  background: rgba(255,255,255,0.9);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.dot-orange { background: #fe480c; }
+.dot-white { background: #fff; }
+.dot-black { background: #000; }
+
+.header-title {
+  margin-left: 10px;
+}
+
+.header-hint {
+  margin-left: auto;
+  color: rgba(0,0,0,0.6);
+}
+
+.availability {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.availability-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.availability-row .time {
+  font-weight: 600;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.contact-card {
+  border: 1px solid #000;
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.72);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-label {
+  color: #000;
+}
+
+.card-accent {
+  color: rgba(0,0,0,0.55);
+}
+
+.card-link,
+.card-links a {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  transition: color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.card-link,
+.card-links a:not(.icon-only) {
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.card-link:hover,
+.card-links a:hover {
+  color: #fe480c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.card-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.link-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.icon-only {
+  position: relative;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.icon-only:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.95);
+  border-color: #000;
+}
+
+.icon-only::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, -100%) translateY(-6px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  background: rgba(255,255,255,0.9);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.icon-only:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -100%) translateY(-2px);
+}
+
+.pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contact-card-note {
+  grid-column: span 2;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  background: rgba(255,255,255,0.9);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.contact-form .btn-primary {
+  width: fit-content;
+  padding-inline: 16px;
+}
+
+@media (max-width: 900px) {
+  .contact-page {
+    padding: 20px 20px 50px;
+  }
+
+  .contact-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card-note {
+    grid-column: span 1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

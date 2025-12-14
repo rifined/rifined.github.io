@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me · A.Belousov Design</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="Assets/Pictures/AB_Logo.png" />
+</head>
+<body>
+  <header>
+    <button class="menu-button" onclick="toggleMenu()">
+      <img src="Assets/Pictures/Menu_Cntrl_Long.png" alt="Menu Button" />
+    </button>
+  </header>
+
+  <nav class="menu-container" id="menuContainer" onclick="toggleMenu()">
+    <a href="index.html" class="logo-link">
+      <img class="logo" src="Assets/Pictures/AB_Logo_White_Bg.png" alt="Logo" />
+    </a>
+    <div class="menu-links">
+      <a class="menu-link" href="index.html">_projects</a>
+      <a class="menu-link" href="../pages/resume.html">_resume</a>
+      <a class="menu-link" href="contact.html">_contact&nbsp;me</a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <h1 class="header-title">Contact Me</h1>
+
+    <section class="project-meta highlight contact-list">
+      <dl class="info-list">
+        <div class="info-row">
+          <dt>Email</dt>
+          <dd>
+            <span class="icon"><img src="Assets/Pictures/email.png" alt="Email icon" class="contact-icon" /></span>
+            <a href="mailto:alex.belousov.design@gmail.com">alex.belousov.design@gmail.com</a>
+          </dd>
+        </div>
+        <div class="info-row">
+          <dt>LinkedIn</dt>
+          <dd>
+            <span class="icon"><img src="Assets/Pictures/linkedin.png" alt="LinkedIn icon" class="contact-icon" /></span>
+            <a href="https://www.linkedin.com/in/aleksandr-belousov-b47211299/" target="_blank" rel="noopener">linkedin.com</a>
+          </dd>
+        </div>
+        <div class="info-row">
+          <dt>Instagram</dt>
+          <dd>
+            <span class="icon"><img src="Assets/Pictures/instagram.png" alt="Instagram icon" class="contact-icon" /></span>
+            <a href="https://instagram.com/rifined.exe" target="_blank" rel="noopener">instagram.com</a>
+          </dd>
+        </div>
+        <div class="info-row">
+          <dt>Resume</dt>
+          <dd>
+            <span class="icon"><img src="Assets/Pictures/drive.png" alt="Resume icon" class="contact-icon" /></span>
+            <a href="https://drive.google.com/file/d/1aZVkOo0qqnoCmzCqNXLTpmquSdsv_LL7/view?usp=sharing" target="_blank" rel="noopener">Download Portfolio (PDF)</a>
+          </dd>
+        </div>
+        <div class="info-row">
+          <dt>Availability</dt>
+          <dd>
+            <div class="timeline">
+              <div class="timeline-item"><span class="day">Mon - Fri&nbsp;&nbsp;</span><span class="time">10:00-18:00</span></div>
+              <div class="timeline-item"><span class="day">Sat</span><span class="time">11:00-15:00</span></div>
+              <div class="timeline-item"><span class="day">Sun</span><span class="time">Closed</span></div>
+            </div>
+          </dd>
+        </div>
+        <div class="info-row">
+            <dt>Messengers</dt>
+            <dd>
+              <span class="icon"><img src="Assets/Pictures/whatsapp.png" alt="WhatsApp icon" class="contact-icon" /></span>
+              <a href="https://wa.me/3477393017" target="_blank" rel="noopener">WhatsApp</a>
+              <span class="icon"><img src="Assets/Pictures/telegram.png" alt="Telegram icon" class="contact-icon" /></span>
+              <a href="https://t.me/rifined" target="_blank" rel="noopener">Telegram</a>
+            </dd>
+          </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="off-grid-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        Turning concepts into visuals,<br />
+        since 2019.
+      </div>
+      <div class="footer-center">
+        <a href="../pages/resume.html">Resume</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-right">
+        <a href="https://instagram.com/rifined.exe" target="_blank" rel="noopener">
+          <img src="Assets/Pictures/instagram_bw.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/aleksandr-belousov-b47211299/" target="_blank" rel="noopener">
+          <img src="Assets/Pictures/linkedin_bw.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+    <div class="footer-logo">
+      <h1>A.B.Design</h1>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuContainer');
+      menu.style.top = menu.style.top === '0px' ? '-100px' : '0px';
+    }
+  </script>
+</body>
+</html>

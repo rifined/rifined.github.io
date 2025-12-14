@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.B.Design</title>
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <link rel="icon" type="image/png" href="assets/img/AB_Logo_White_Bg.png" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP NAV BAR -->
+<header class="top-nav">
+  <div class="top-nav-inner">
+
+    <!-- 1. Кружок-логотип студии -->
+    <a href="index.html" class="nav-circle nav-logo">
+      <img src="assets/img/AB_Logo_Black.png" alt="A.B. Logo">
+    </a>
+
+    <!-- 2. Кнопка Projects (скроллит к списку) -->
+    <a href="#projects" class="nav-pill nav-pill-primary">
+      Projects
+    </a>
+
+    <!-- 3. Кнопка Resume -->
+    <a href="pages/resume.html" class="nav-pill">
+      Resume
+    </a>
+
+    <!-- 4. КОНВЕЙЕР ПРОЕКТОВ -->
+    <div class="nav-conveyor">
+      <div class="nav-conveyor-track" id="projectConveyor">
+        <!-- один элемент = одна капсула проекта -->
+        <a href="projects/bonch_tigers.html" class="nav-project-chip">
+          <img src="assets/img/projects/bonch-tigers/Bonch_Tigers_Icon.png" alt="Bonch Tigers">
+          <span>Bonch Tigers — 2024</span>
+        </a>
+
+        <a href="projects/stream_studio.html" class="nav-project-chip">
+          <img src="assets/img/projects/stream-studio/Stream_Studio_Icon.png" alt="Stream Studio">
+          <span>Stream Studio — 2024</span>
+        </a>
+
+        <a href="projects/enhavor.html" class="nav-project-chip">
+          <img src="assets/img/projects/enhavor/Enhavor_Icon.png" alt="Enhavor">
+          <span>Enhavor — 2023</span>
+        </a>
+
+        <a href="projects/se_league.html" class="nav-project-chip">
+          <img src="assets/img/projects/se-league/SEL_Icon.png" alt="Student e-sport league">
+          <span>Student e-sport league — 2022</span>
+        </a>
+
+        <a href="projects/vist_plus.html" class="nav-project-chip">
+          <img src="assets/img/projects/vist-plus/Vist_Icon.png" alt="Vist+">
+          <span>Vist+ — 2021</span>
+        </a>
+
+        <a href="projects/trainx.html" class="nav-project-chip">
+          <img src="assets/img/projects/trainx/TrainX_Icon.png" alt="TrainX">
+          <span>TrainX — 2021</span>
+        </a>
+
+        <a href="projects/oceanic_zen_zone.html" class="nav-project-chip">
+          <img src="assets/img/projects/oceanzone/OceanZone_Icon.png" alt="Oceanic Zen Zone">
+          <span>Oceanic Zen Zone — 2020</span>
+        </a>
+
+        <a href="projects/fortuna.html" class="nav-project-chip">
+          <img src="assets/img/projects/fortuna/Fortuna_Icon.png" alt="Fortuna">
+          <span>Fortuna — 2020</span>
+        </a>
+
+        <a href="projects/dushechkina.html" class="nav-project-chip">
+          <img src="assets/img/projects/dushechkina/Dushechkina_Icon.png" alt="Elena Dushechkina">
+          <span>Elena Dushechkina — 2020</span>
+        </a>
+
+        <a href="projects/tdk_electric.html" class="nav-project-chip">
+          <img src="assets/img/projects/tdk-electric/TDK_Icon.png" alt="TDK Electric">
+          <span>TDK Electric — 2019</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. Кнопка Random / ↺ -->
+    <button type="button" class="nav-pill nav-pill-random" id="randomProjectBtn">
+      Random<span class="nav-pill-rnd-tag">↺</span>
+    </button>
+
+    <!-- 6. Кружок с телефоном -> Contact -->
+    <a href="pages/contact.html" class="nav-circle nav-phone">
+      <span class="nav-phone-glyph">🔗</span>
+      <!-- Можно заменить на <img src="assets/img/chat.png"> -->
+    </a>
+
+  </div>
+</header>
+
+  <!-- HERO: центрированный A.BELOUSOV DESIGN с линиями -->
+  <section class="hero">
+    <div class="hero-heading">
+      <span class="hero-line"></span>
+      <h1 class="hero-title">A.BELOUSOV DESIGN</h1>
+      <span class="hero-line"></span>
+    </div>
+
+    <div class="hero-models">
+      <div class="hero-models-grid">
+        <div class="hero-window hero-window--primary">
+          <div class="hero-model-header">
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-title">Studio mark — 3D</span>
+            <span class="hero-model-hint">drag to orbit</span>
+          </div>
+          <model-viewer
+            src="assets/models/ABnew.glb"
+            alt="A.Belousov Design 3D mark"
+            camera-controls
+            auto-rotate
+            autoplay
+            disable-zoom
+            shadow-intensity="0.8"
+            exposure="1.05"
+            interaction-prompt="none"
+          ></model-viewer>
+        </div>
+
+        <div class="hero-window hero-window--photo">
+          <div class="hero-model-header">
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-title">01</span>
+            <span class="hero-model-hint">portrait</span>
+          </div>
+          <div class="hero-window-photo">
+            <img src="assets/img/portrait_2.png" alt="Portrait 01">
+          </div>
+        </div>
+
+        <div class="hero-window hero-window--alt-model">
+          <div class="hero-model-header">
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-title">Studio mark — v2</span>
+            <span class="hero-model-hint">spin</span>
+          </div>
+          <model-viewer
+            src="assets/models/AB3d_b.glb"
+            alt="A.Belousov Design 3D mark v2"
+            camera-controls
+            auto-rotate
+            autoplay
+            disable-zoom
+            shadow-intensity="0.75"
+            exposure="1.05"
+            interaction-prompt="none"
+          ></model-viewer>
+        </div>
+
+        <div class="hero-window hero-window--photo hero-window--photo-bottom">
+          <div class="hero-model-header">
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-dot"></span>
+            <span class="hero-model-title">02</span>
+            <span class="hero-model-hint">portrait</span>
+          </div>
+          <div class="hero-window-photo hero-window-photo--alt">
+            <img src="assets/img/portrait_1.png" alt="Portrait 02">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BIO -->
+  <section class="bio-section">
+    <div class="bio-inner">
+      <span class="bio-label">(BIO)</span>
+      <p class="bio-text">
+        that's me, I am a graphic designer with experience in corporate identity,
+        logo design and online communications management for companies across a
+        variety of industries.
+      </p>
+    </div>
+    <div class="bio-line"></div>
+
+    <div class="bio-cta">
+      <a href="#projects" class="btn-primary">View projects</a>
+      <a href="pages/contact.html" class="btn-secondary">Contact</a>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="featured-projects">
+    <div class="featured-list">
+
+      <a class="featured-item" href="projects/bonch_tigers.html">
+        <img src="assets/img/projects/bonch-tigers/Bonch_Tigers_Banner.png" alt="Bonch Tigers">
+      </a>
+
+      <a class="featured-item" href="projects/tdk_electric.html">
+        <img src="assets/img/projects/tdk-electric/TDK_Banner.png" alt="TDK Electric">
+      </a>
+
+      <a class="featured-item" href="projects/stream_studio.html">
+        <img src="assets/img/projects/stream-studio/Cyber_Bonch_Banner.png" alt="Stream Studio">
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ALL PROJECTS -->
+  <section id="projects" class="all-projects">
+    <h3 class="section-title">All Projects</h3>
+
+    <div class="project-grid">
+
+      <a class="project-card" href="projects/enhavor.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/enhavor/Enhavor_Icon.png" alt="Enhavor">
+        </div>
+        <h4>enhavor</h4>
+        <p>2023 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/trainx.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/trainx/TrainX_Icon.png" alt="TrainX">
+        </div>
+        <h4>trainX</h4>
+        <p>2021 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/dushechkina.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/dushechkina/Dushechkina_Icon.png" alt="Dushechkina">
+        </div>
+        <h4>elena<br>dushechkina</h4>
+        <p>2020 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/fortuna.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/fortuna/Fortuna_Icon.png" alt="Fortuna">
+        </div>
+        <h4>fortuna</h4>
+        <p>2020 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/se_league.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/se-league/SEL_Icon.png" alt="Student E-sport League">
+        </div>
+        <h4>student<br>e-sport<br>league</h4>
+        <p>2022 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/tdk_electric.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/tdk-electric/TDK_Icon.png" alt="TDK Electric">
+        </div>
+        <h4>tdk<br>electric</h4>
+        <p>2019 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/oceanic_zen_zone.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/oceanzone/OceanZone_Icon.png" alt="Ocean Zone">
+        </div>
+        <h4>oceanic<br>zen zone</h4>
+        <p>2020 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/vist_plus.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/vist-plus/Vist_Icon.png" alt="Vist+">
+        </div>
+        <h4>vist+</h4>
+        <p>2021 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/bonch_tigers.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/bonch-tigers/Bonch_Tigers_Icon.png" alt="Bonch Tigers">
+        </div>
+        <h4>bonch<br>tigers</h4>
+        <p>2022 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/stream_studio.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/stream-studio/Stream_Studio_Icon.png" alt="Stream Studio">
+        </div>
+        <h4>stream<br>studio</h4>
+        <p>2022 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/ist-122.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/ist-122/ist122_Icon.png" alt="ist-122">
+        </div>
+        <h4>ist-122</h4>
+        <p>2020 by abd®</p>
+      </a>
+
+      <a class="project-card" href="projects/dds4.html">
+        <div class="project-thumb">
+          <div class="thumb-bg"></div>
+          <img src="assets/img/projects/dds4/DDS4_Icon.png" alt="dds4">
+        </div>
+        <h4>dds4</h4>
+        <p>2023 by abd®</p>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- METRICS BOARD -->
+  <section class="stats-board">
+    <div class="stats-board-inner">
+      <div class="stats-title-row">
+        <span class="stats-label">(METRICS)</span>
+        <span class="stats-line"></span>
+        <span class="stats-note">mono snapshot</span>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-value">21</div>
+          <div class="stat-name">brands shipped</div>
+          <p class="stat-desc">Identities launched for teams, startups and studios.</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value">6</div>
+          <div class="stat-name">years in design</div>
+          <p class="stat-desc">Building systems across logo, motion, merch and digital.</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value">12K</div>
+          <div class="stat-name">merch units</div>
+          <p class="stat-desc">Jerseys, merch and kits produced.</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value">30K</div>
+          <div class="stat-name">stream views</div>
+          <p class="stat-desc">Broadcast overlays and assets seen across events.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-tagline">
+          Turning concepts into visuals,<br>
+          since 2019.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="pages/resume.html">Resume</a>
+          <a href="pages/contact.html">Contact Me</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <img src="assets/img/instagram_bw.png" alt="Instagram" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <img src="assets/img/linkedin_bw.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-logo-row">
+      <div class="footer-logo">A.B.DESIGN</div>
+    </div>
+  </footer>
+
+   <script src="assets/js/script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,623 @@
+/* TOP NAV */
+
+.top-nav {
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.top-nav-inner {
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;      /* те же 20px, что у hero-heading */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* КРУГИ (логотип, телефон) — 40x40 */
+
+.nav-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.nav-circle img {
+  max-width: 70%;
+  height: auto;
+}
+
+.nav-circle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+.nav-phone-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* ПИЛЮЛИ (Projects, Resume, Random) — высота ≈30px */
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 20px;              /* 16 + 2*6 + 2 бордера ≈ 30px */
+  border-radius: 999px;
+  border: 1px solid #000;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+
+  background: rgba(255,255,255,0.75);
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Random стилизуем чуть ярче */
+
+.nav-pill-random {
+  background: #000;
+  color: #fff;
+}
+
+.nav-pill-random:hover {
+  background: #FE480C;
+  border-color: #FE480C;
+  box-shadow: 0 6px 18px rgba(254,72,12,0.35);
+}
+
+.nav-pill-active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.nav-pill-active:hover {
+  background: #FE480C;
+  border-color: #FE480C;
+  box-shadow: 0 6px 18px rgba(254,72,12,0.35);
+}
+
+.nav-pill-rnd-tag {
+  margin-left: 10px;
+  padding: 0 2px;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4em;      /* чтобы символ не сжимался */
+  line-height: 1;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ========= КОНВЕЙЕР ПРОЕКТОВ ========= */
+/* высота 40px, внутри пилюли ~30px, по центру */
+
+.nav-conveyor {
+  flex: 1;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px dashed #000;
+  padding: 4px 8px;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;   /* выравниваем пилюли вертикально по центру */
+}
+
+.nav-conveyor-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  animation: conveyor-slide 100s linear infinite;
+}
+
+/* ПИЛЮЛИ КОНВЕЙЕРА — те же 30px по высоте, что и .nav-pill */
+
+.nav-project-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 14px;              /* те же 6px по вертикали */
+  border-radius: 999px;
+  border: 1px solid #000;
+
+  background: rgba(255,255,255,0.85);
+  text-decoration: none;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav-project-chip img {
+  width: 18px;
+  height: 18px;
+}
+
+/* hover на капсуле */
+
+.nav-project-chip:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* мягкий предпросмотр Random при hover на кнопку:
+   плавная оранжевая подсветка без движения */
+
+.nav-project-chip.is-random-preview {
+  background: #FE480C;
+  color: #fff;
+  border-color: #FE480C;
+
+  box-shadow:
+    0 0 0 1px #FE480C,
+    0 0 16px rgba(254,72,12,0.45);
+}
+
+/* базовая бесконечная прокрутка */
+
+@keyframes conveyor-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* HERO — минимальный отступ сверху, огромный снизу */
+
+.hero {
+  padding-top: 6px;         /* минимальный отступ сверху */
+  padding-bottom: 4vh;     /* минимальный отступ до следующего блока */
+}
+
+.hero-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;                 /* расстояние между текстом и линиями */
+  padding: 0 20px;           /* чтобы линии не прилипали к самому краю */
+}
+
+.hero-title {
+  font-family: "Truin", serif;
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ЛИНИИ — от края до центра */
+.hero-line {
+  flex: 1;
+  height: 1px;
+  background: #000;
+}
+
+/* FEATURED */
+.featured-projects {
+  padding: 0 0 40px;
+}
+
+/* ============ FOOTER ============ */
+
+.site-footer {
+  background: #FE480C;
+  color: #000;
+  padding: 28px 0 32px;
+  margin-top: 80px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-tagline {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  position: relative;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.2s ease;
+}
+
+.footer-links a:hover {
+  transform: translateX(3px);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 48px;
+  background: #000;
+  margin-top: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-socials img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.footer-socials a:hover img {
+  transform: translateX(3px) scale(1.05);
+  opacity: 0.85;
+}
+
+.footer-logo-row {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 0 40px;
+}
+
+.footer-logo {
+  font-family: "Truin", serif;
+  font-size: 140px;
+  letter-spacing: 4px;
+  text-align: left;
+}
+
+/* ===== HERO COVERFLOW ===== */
+
+.hero-coverflow {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;       /* для больших экранов */
+  margin-inline: auto;
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* окно под 3D-сцену и шире */
+.cf-viewport {
+  width: 100%;
+  max-width: 1200px;      /* уже фон */
+  height: 420px;          /* ниже фон */
+  perspective: 1800px;
+  overflow: hidden;       /* маска по краям */
+  position: relative;
+  margin-inline: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: radial-gradient(circle at 20% 15%, rgba(254,72,12,0.08), transparent 50%), linear-gradient(135deg, rgba(254,72,12,0.05), rgba(0,0,0,0.02));
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* ===== VERY THIN ARROWS ===== */
+.cf-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  background: rgba(255,255,255,0.9);
+  border: 1.25px solid #000;
+  border-radius: 50%;
+
+  font-size: 0; /* скрываем текст, рисуем стрелку псевдоэлементом */
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cf-arrow::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000;
+  border-top: 0;
+  border-right: 0;
+  margin: auto;
+}
+
+.cf-prev::before {
+  transform: rotate(45deg);
+}
+
+.cf-next::before {
+  transform: rotate(-135deg);
+}
+
+/* позиции по краям контейнера — адаптивные через clamp */
+.cf-prev { left: clamp(8px, 1.6vw, 28px); }
+.cf-next { right: clamp(8px, 1.6vw, 28px); }
+
+.cf-arrow:hover {
+  background: rgba(255,255,255,0.98);
+  transform: translateY(-50%) scale(1.04);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.cf-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cf-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 700px;              /* ШИРИНА */
+  height: 400px;             /* ВЫСОТА */
+
+  margin-left: -350px;       /* компенсация половины ширины → ровно центр */
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.9s cubic-bezier(.22,.61,.36,1),
+    opacity 0.45s ease,
+    filter 0.45s ease,
+    box-shadow 0.45s ease;
+
+  box-shadow: 0 18px 46px rgba(0,0,0,0.16);
+  background: rgba(255,255,255,0.8);
+}
+
+.cf-item-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 26px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(254,72,12,0.06), rgba(0,0,0,0.02));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.cf-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid #000;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cf-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  flex-shrink: 0;
+}
+.cf-dot-orange { background: #fe480c; }
+.cf-dot-white { background: #fff; }
+.cf-dot-black { background: #000; }
+
+.cf-item-title { margin-left: 6px; }
+
+.cf-item-hint {
+  margin-left: auto;
+  color: rgba(0,0,0,0.6);
+}
+
+.cf-item-body {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.cf-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cf-item-pill {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #000;
+  background: rgba(255,255,255,0.88);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.cf-item.is-active {
+  box-shadow: 0 28px 70px rgba(0,0,0,0.26);
+}
+
+.cf-item.is-active .cf-item-header {
+  background: rgba(255,255,255,0.98);
+}
+
+.cf-item.is-active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(254,72,12,0.08), transparent 55%);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* подпись под центром */
+.hero-coverflow-meta {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-coverflow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid #000;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(2px);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+}
+
+.cf-meta-asset {
+  font-weight: 600;
+}
+
+.cf-meta-project {
+  opacity: 0.7;
+}
+
+@keyframes fadeUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* изначально скрыты, пока анимация не отработает */
+.top-nav-inner,
+.hero-heading {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* как только CSS загрузился — анимация стартует сама */
+.top-nav-inner {
+  animation: fadeUpSoft 0.6s ease-out 0.05s forwards;
+}
+
+.hero-heading {
+  animation: fadeUpSoft 0.7s ease-out 0.15s forwards;
+}
+
+.bio-inner {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUpSoft 0.7s ease-out 0.25s forwards;
+}
+
+/* линия под BIO */
+.bio-line {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUpSoft 1s ease-out 0.35s forwards; /* чуть позже */
+}

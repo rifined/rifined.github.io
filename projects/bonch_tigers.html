@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bonch Tigers | A.B.Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- базовые стили сайта -->
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+
+  <!-- стили только для project-страниц -->
+  <link rel="stylesheet" href="../assets/css/project.css" />
+
+  <!-- ваш общий скрипт (меню, конвейер, рандом и т.п.) -->
+  <script src="../assets/js/script.js" defer></script>
+
+  <link rel="icon" type="image/png" href="../assets/img/AB_Logo_White_Bg.png" />
+</head>
+<body>
+
+  <!-- HEADER — здесь должен быть ТОТ ЖЕ хедер, что и на index.html.
+       Проще всего просто скопировать его из index и изменить только href ссылок.
+       Если он у тебя уже норм — можешь оставить свой вариант. -->
+  <!-- TOP NAV BAR -->
+<header class="top-nav">
+  <div class="top-nav-inner">
+
+    <!-- 1. Кружок-логотип студии -->
+    <a href="../index.html" class="nav-circle nav-logo">
+      <img src="../assets/img/AB_Logo_Black.png" alt="A.B. Logo">
+    </a>
+
+    <!-- 2. Кнопка Projects (скроллит к списку) -->
+    <a href="#projects" class="nav-pill nav-pill-primary">
+      Projects
+    </a>
+
+    <!-- 3. Кнопка Resume -->
+    <a href="../pages/resume.html" class="nav-pill">
+      Resume
+    </a>
+
+    <!-- 4. КОНВЕЙЕР ПРОЕКТОВ -->
+    <div class="nav-conveyor">
+      <div class="nav-conveyor-track" id="projectConveyor">
+        <!-- один элемент = одна капсула проекта -->
+        <a href="bonch_tigers.html" class="nav-project-chip">
+          <img src="assets/img/projects/bonch-tigers/ABDesign_Assets_Artboard 8 copy 2.png" alt="Bonch Tigers">
+          <span>Bonch Tigers — 2024</span>
+        </a>
+
+        <a href="stream_studio.html" class="nav-project-chip">
+          <img src="assets/img/projects/stream-studio/ABDesign_Assets_Artboard 8 copy 3.png" alt="Stream Studio">
+          <span>Stream Studio — 2024</span>
+        </a>
+
+        <a href="enhavor.html" class="nav-project-chip">
+          <img src="../assets/img/projects/enhavor/Enhavor_Icon.png" alt="Enhavor">
+          <span>Enhavor — 2023</span>
+        </a>
+
+        <a href="se_league.html" class="nav-project-chip">
+          <img src="../assets/img/projects/se-league/SEL_Icon.png" alt="Student e-sport league">
+          <span>Student e-sport league — 2022</span>
+        </a>
+
+        <a href="vist_plus.html" class="nav-project-chip">
+          <img src="../assets/img/projects/vist-plus/Vist_Icon.png" alt="Vist+">
+          <span>Vist+ — 2021</span>
+        </a>
+
+        <a href="trainx.html" class="nav-project-chip">
+          <img src="../assets/img/projects/trainx/TrainX_Icon.png" alt="TrainX">
+          <span>TrainX — 2021</span>
+        </a>
+
+        <a href="oceanic_zen_zone.html" class="nav-project-chip">
+          <img src="../assets/img/projects/oceanzone/OceanZone_Icon.png" alt="Oceanic Zen Zone">
+          <span>Oceanic Zen Zone — 2020</span>
+        </a>
+
+        <a href="fortuna.html" class="nav-project-chip">
+          <img src="../assets/img/projects/fortuna/Fortuna_Icon.png" alt="Fortuna">
+          <span>Fortuna — 2020</span>
+        </a>
+
+        <a href="dushechkina.html" class="nav-project-chip">
+          <img src="../assets/img/projects/dushechkina/Dushechkina_Icon.png" alt="Elena Dushechkina">
+          <span>Elena Dushechkina — 2020</span>
+        </a>
+
+        <a href="tdk_electric.html" class="nav-project-chip">
+          <img src="../assets/img/projects/tdk-electric/TDK_Icon.png" alt="TDK Electric">
+          <span>TDK Electric — 2019</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. Кнопка Random / ↺ -->
+    <button type="button" class="nav-pill nav-pill-random" id="randomProjectBtn">
+      Random<span class="nav-pill-rnd-tag">↺</span>
+    </button>
+
+    <!-- 6. Кружок с телефоном -> Contact -->
+    <a href="../pages/contact.html" class="nav-circle nav-phone">
+      <span class="nav-phone-glyph">🔗</span>
+      <!-- Можно заменить на <img src="assets/img/chat.png"> -->
+    </a>
+
+  </div>
+</header>
+
+  <div class="project-page">
+
+    <!-- back link -->
+    <a href="../index.html#projects" class="project-back-link">
+      ← Back to projects
+    </a>
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <header class="project-hero-header">
+        <h1 class="project-title">BONCH TIGERS</h1>
+      </header>
+
+      <p class="project-lede">
+        Esports identity and media system for SPbSUT’s student team — built for
+        jerseys, streams, social media and live events.
+      </p>
+
+      <div class="project-meta-grid">
+        <div class="project-meta-row">
+          <span class="project-meta-label">(YEAR)</span>
+          <span class="project-meta-line"></span>
+          <span class="project-meta-value">2022</span>
+        </div>
+
+        <div class="project-meta-row">
+          <span class="project-meta-label">(TIME SPENT)</span>
+          <span class="project-meta-line"></span>
+          <span class="project-meta-value">2 months</span>
+        </div>
+
+        <div class="project-meta-row">
+          <span class="project-meta-label">(SERVICES)</span>
+          <span class="project-meta-line"></span>
+          <span class="project-meta-value">
+            brand / visual identity + merchandise
+          </span>
+        </div>
+      </div>
+
+      <!-- главный баннер без «скреплений» -->
+      <figure class="project-banner-wrapper">
+        <img
+          src="../assets/img/projects/bonch-tigers/bonch_tigers_banner.png"
+          alt="Bonch Tigers primary banner"
+          class="project-banner"
+        />
+      </figure>
+    </section>
+
+    <!-- GALLERY / 3D-карусель ассетов -->
+    <!-- Coverflow -->
+    <div class="hero-coverflow">
+      <button class="cf-arrow cf-prev" type="button">←</button>
+
+      <div class="cf-viewport">
+        <div class="cf-track">
+          <!-- 20 карточек, пока все с одной заглушкой -->
+          <!-- можешь потом поменять src / data-asset / data-project под реальные проекты -->
+
+          <div class="cf-item" data-asset="Asset 01" data-project="Project 01">
+            <img src="../assets/img/projects/bonch-tigers/carousel/BonchTigers-02.png" alt="Asset 01">
+          </div>
+          <div class="cf-item" data-asset="Asset 02" data-project="Project 02">
+            <img src="../assets/img/projects/bonch-tigers/carousel/Logo Sign.png" alt="Asset 02">
+          </div>
+          <div class="cf-item" data-asset="Asset 03" data-project="Project 03">
+            <img src="../assets/img/projects/bonch-tigers/carousel/Macbook Long Scroll Mockup.png" alt="Asset 03">
+          </div>
+        </div>
+      </div>
+
+      <button class="cf-arrow cf-next" type="button">→</button>
+    </div>
+
+    <!-- подпись под центром -->
+    <div class="hero-coverflow-meta">
+      <div class="hero-coverflow-pill">
+        <span class="cf-meta-asset">Asset 01</span>
+        <span class="cf-meta-project">Project 01</span>
+      </div>
+    </div>
+
+    <!-- ABOUT + TARGET PERSONAS в 2 колонки -->
+    <section class="project-body">
+
+      <!-- ABOUT -->
+      <section class="project-section project-about">
+        <div class="project-section-header">
+          <h2 class="section-title">ABOUT</h2>
+          <span class="section-index">(01)</span>
+        </div>
+
+        <div class="project-about-block">
+          <h3 class="project-subhead">(NEON ROAR)</h3>
+          <p>
+            A snarling tiger emblem and razor-edged word-mark collide in a blaze
+            of red-orange and white, turning jerseys and Twitch overlays into
+            electric statements of strength. The old template melts away; what’s
+            left grabs your eye and doesn’t let go.
+          </p>
+        </div>
+
+        <div class="project-about-block">
+          <h3 class="project-subhead">(FERAL GEOMETRY)</h3>
+          <p>
+            From marbled-stripe kits tucked in sleek packaging to a library of
+            digital assets, the suite flexes across screens and merch alike —
+            amplifying campus hype and luring sponsors with a brand that growls
+            before the match even starts.
+          </p>
+        </div>
+      </section>
+
+      <!-- TARGET PERSONAS -->
+      <section class="project-section project-personas">
+        <div class="project-section-header">
+          <h2 class="section-title">TARGET PERSONAS</h2>
+          <span class="section-index">(02)</span>
+        </div>
+
+        <div class="persona-grid">
+          <article class="persona-card">
+            <h3 class="persona-title">STUDENT GAMER</h3>
+            <p>
+              A young e-sports enthusiast who spends hours watching tournaments
+              and wants the team to look as serious as the pros.
+            </p>
+          </article>
+
+          <article class="persona-card">
+            <h3 class="persona-title">TEAM COACH</h3>
+            <p>
+              Responsible for the team’s branding and equipment selection,
+              looking for a flexible system that works on jersey, stream and
+              print.
+            </p>
+          </article>
+
+          <article class="persona-card">
+            <h3 class="persona-title">SPONSOR</h3>
+            <p>
+              Seeking bold, memorable branding projects to support and promote
+              across campus events and local media.
+            </p>
+          </article>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- STYLEGUIDE / COLORS -->
+    <section class="project-section project-styleguide">
+      <div class="project-styleguide-header">
+        <h2 class="section-title">STYLEGUIDE</h2>
+        <span class="section-index">(03)</span>
+      </div>
+
+      <h3 class="styleguide-subtitle">COLORS</h3>
+
+      <div class="styleguide-grid">
+        <!-- Coquelicot -->
+        <article class="color-card">
+          <div class="color-swatch color-swatch-orange"></div>
+          <div class="color-meta">
+            <h4 class="color-name">COQUELICOT</h4>
+            <p class="color-hex">#FE470D</p>
+            <p class="color-rgb">254, 71, 13</p>
+          </div>
+        </article>
+
+        <!-- Pure white -->
+        <article class="color-card">
+          <div class="color-swatch color-swatch-white"></div>
+          <div class="color-meta">
+            <h4 class="color-name">PURE WHITE</h4>
+            <p class="color-hex">#FFFFFF</p>
+            <p class="color-rgb">255, 255, 255</p>
+          </div>
+        </article>
+
+        <!-- Deep black -->
+        <article class="color-card">
+          <div class="color-swatch color-swatch-black"></div>
+          <div class="color-meta">
+            <h4 class="color-name">DEEP BLACK</h4>
+            <p class="color-hex">#000000</p>
+            <p class="color-rgb">0, 0, 0</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section project-tools">
+      <div class="project-styleguide-header">
+        <h2 class="section-title">TOOLS &amp; TECHNOLOGIES</h2>
+        <span class="section-index">(04)</span>
+      </div>
+      <div class="tools-grid">
+        <span class="tool-pill">Photoshop</span>
+        <span class="tool-pill">Illustrator</span>
+        <span class="tool-pill">After Effects</span>
+        <span class="tool-pill">Premiere Pro</span>
+        <span class="tool-pill">Figma</span>
+        <span class="tool-pill">Blender</span>
+        <span class="tool-pill">Substance</span>
+        <span class="tool-pill">Davinci Resolve</span>
+      </div>
+    </section>
+  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-tagline">
+          Turning concepts into visuals,<br>
+          since 2019.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="../pages/resume.html">Resume</a>
+          <a href="../pages/contact.html">Contact Me</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <img src="../assets/img/instagram_bw.png" alt="Instagram" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <img src="../assets/img/linkedin_bw.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-logo-row">
+      <div class="footer-logo">A.B.DESIGN</div>
+    </div>
+  </footer>
+</body>
+</html>

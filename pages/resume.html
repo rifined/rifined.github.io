@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume · A.B.Design</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/resume.css" />
+
+  <link rel="icon" type="image/png" href="../assets/img/AB_Logo_White_Bg.png" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP NAV BAR -->
+  <header class="top-nav">
+    <div class="top-nav-inner">
+
+      <a href="../index.html" class="nav-circle nav-logo">
+        <img src="../assets/img/AB_Logo_Black.png" alt="A.B. Logo">
+      </a>
+
+      <a href="../index.html#projects" class="nav-pill nav-pill-primary">
+        Projects
+      </a>
+
+      <a href="../pages/resume.html" class="nav-pill nav-pill-active">
+        Resume
+      </a>
+
+      <div class="nav-conveyor">
+        <div class="nav-conveyor-track" id="projectConveyor">
+          <a href="../projects/bonch_tigers.html" class="nav-project-chip">
+            <img src="../assets/img/projects/bonch-tigers/Bonch_Tigers_Banner.png" alt="Bonch Tigers">
+            <span>Bonch Tigers — 2024</span>
+          </a>
+          <a href="../projects/stream_studio.html" class="nav-project-chip">
+            <img src="../assets/img/projects/stream-studio/Cyber_Bonch_Banner.png" alt="Stream Studio">
+            <span>Stream Studio — 2024</span>
+          </a>
+          <a href="../projects/enhavor.html" class="nav-project-chip">
+            <img src="../assets/img/projects/enhavor/Enhavor_Icon.png" alt="Enhavor">
+            <span>Enhavor — 2023</span>
+          </a>
+          <a href="../projects/se_league.html" class="nav-project-chip">
+            <img src="../assets/img/projects/se-league/SEL_Icon.png" alt="Student e-sport league">
+            <span>Student e-sport league — 2022</span>
+          </a>
+          <a href="../projects/vist_plus.html" class="nav-project-chip">
+            <img src="../assets/img/projects/vist-plus/Vist_Icon.png" alt="Vist+">
+            <span>Vist+ — 2021</span>
+          </a>
+          <a href="../projects/trainx.html" class="nav-project-chip">
+            <img src="../assets/img/projects/trainx/TrainX_Icon.png" alt="TrainX">
+            <span>TrainX — 2021</span>
+          </a>
+          <a href="../projects/oceanic_zen_zone.html" class="nav-project-chip">
+            <img src="../assets/img/projects/oceanzone/OceanZone_Icon.png" alt="Oceanic Zen Zone">
+            <span>Oceanic Zen Zone — 2020</span>
+          </a>
+          <a href="../projects/fortuna.html" class="nav-project-chip">
+            <img src="../assets/img/projects/fortuna/Fortuna_Icon.png" alt="Fortuna">
+            <span>Fortuna — 2020</span>
+          </a>
+          <a href="../projects/dushechkina.html" class="nav-project-chip">
+            <img src="../assets/img/projects/dushechkina/Dushechkina_Icon.png" alt="Elena Dushechkina">
+            <span>Elena Dushechkina — 2020</span>
+          </a>
+          <a href="../projects/tdk_electric.html" class="nav-project-chip">
+            <img src="../assets/img/projects/tdk-electric/TDK_Icon.png" alt="TDK Electric">
+            <span>TDK Electric — 2019</span>
+          </a>
+        </div>
+      </div>
+
+      <button type="button" class="nav-pill nav-pill-random" id="randomProjectBtn">
+        Random<span class="nav-pill-rnd-tag">↺</span>
+      </button>
+
+      <a href="../pages/contact.html" class="nav-circle nav-phone">
+        <span class="nav-phone-glyph">💬</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main class="resume-page">
+    <section class="resume-hero">
+      <div class="resume-hero-text">
+        <span class="resume-kicker">(Resume)</span>
+        <h1 class="resume-title">Aleksandr Belousov</h1>
+        <p class="resume-tagline">
+          Brand & visual designer crafting identity, UI systems, and 3D/AR visuals for tech and culture projects.
+        </p>
+
+        <div class="resume-pills">
+          <span class="pill">Based in New York, NY</span>
+          <span class="pill">Open to on-site / remote</span>
+          <span class="pill pill-light">English / Русский</span>
+        </div>
+
+        <div class="resume-links">
+          <a class="contact-chip" href="mailto:alex.belousov.design@gmail.com">
+            <img src="../assets/img/email.png" alt="Email">
+            <span>alex.belousov.design@gmail.com</span>
+          </a>
+          <a class="contact-chip" href="tel:+13477393017">
+            <span class="chip-glyph">☎</span>
+            <span>+1 347 739 3017</span>
+          </a>
+          <a class="contact-chip" href="https://www.linkedin.com/in/aleksandr-belousov-b47211299/" target="_blank" rel="noreferrer">
+            <img src="../assets/img/linkedin.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-chip" href="../pages/contact.html">
+            <span class="chip-glyph">↗</span>
+            <span>Portfolio & contact</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <div class="section-head">
+        <h2>Work Experience</h2>
+        <span class="section-count">(01)</span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="ti-header">
+            <div>
+              <div class="ti-role">Reflex Group</div>
+              <div class="ti-title">Graphic Designer</div>
+            </div>
+            <div class="ti-meta">Sep 2025 — Present · New York, NY</div>
+          </div>
+          <p>Developing brand visuals, digital content, and creative solutions across campaigns for clients including Macintosh, Mac, and Lamborghini; event-focused design.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="ti-header">
+            <div>
+              <div class="ti-role">Phoenix Theatre Ensemble</div>
+              <div class="ti-title">Graphic Designer</div>
+            </div>
+            <div class="ti-meta">Apr 2024 — Mar 2025 · New York, NY</div>
+          </div>
+          <p>Curated and designed social content, produced posters, and launched a new website to grow the theatre’s digital presence.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="ti-header">
+            <div>
+              <div class="ti-role">Lightning Bounties</div>
+              <div class="ti-title">Graphic Designer</div>
+            </div>
+            <div class="ti-meta">Oct 2024 — May 2025 · New York, NY</div>
+          </div>
+          <p>Authored a brandbook covering typography, color, and logo usage for consistent visuals across all channels.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="ti-header">
+            <div>
+              <div class="ti-role">Tamizdat Project (Hunter College)</div>
+              <div class="ti-title">Graphic Designer</div>
+            </div>
+            <div class="ti-meta">Jun 2023 — Aug 2023 · New York, NY</div>
+          </div>
+          <p>Created a distinctive logo, identity, and merchandise aligning with the Tamizdat mission.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="ti-header">
+            <div>
+              <div class="ti-role">CyberBonch (SPbSUT)</div>
+              <div class="ti-title">Head of Design Department</div>
+            </div>
+            <div class="ti-meta">Sep 2020 — May 2022 · St. Petersburg, Russia</div>
+          </div>
+          <p>Built brandbook, logo, broadcast graphics, and social media; led design for live streams and video editing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <div class="section-head">
+        <h2>Education</h2>
+        <span class="section-count">(02)</span>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-head">
+            <div>
+              <div class="edu-school">Hunter College, CUNY</div>
+              <div class="edu-degree">Major: Emerging Media </br> Minor: Computer Science</div>
+            </div>
+            <div class="edu-meta">Sep 2022 — May 2025 </br> New York, NY</div>
+          </div>
+          <div class="edu-list">
+            Zimin Foundation Scholarship (merit-based)<br>
+            Dean's List · GPA 3.63
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-head">
+            <div>
+              <div class="edu-school">SPbSUT</div>
+              <div class="edu-degree">Major: Computer Science</div>
+            </div>
+            <div class="edu-meta">Sep 2020 — May 2022 </br> St. Petersburg, Russia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <span class="section-count">(03)</span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-title">Programs</div>
+          <div class="pill-row">
+            <span class="pill">Photoshop</span>
+            <span class="pill">Illustrator</span>
+            <span class="pill">After Effects</span>
+            <span class="pill">Premiere</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Blender</span>
+            <span class="pill">Substance</span>
+            <span class="pill">Davinci Resolve</span>
+            <span class="pill">Fusion</span>
+            <span class="pill">SketchUp</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-title">Courses / Domains</div>
+          <div class="pill-row">
+            <span class="pill">New Media</span>
+            <span class="pill">Digital Design</span>
+            <span class="pill">3D Graphics</span>
+            <span class="pill">Media & AR</span>
+            <span class="pill">Usability & GUI</span>
+            <span class="pill">Web Production (HTML/CSS/JS)</span>
+            <span class="pill">Creative Code (Max 8)</span>
+            <span class="pill">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-title">Languages</div>
+          <div class="pill-row">
+            <span class="pill">English (fluent)</span>
+            <span class="pill">Russian (native)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <div class="section-head">
+        <h2>Interests & Competencies</h2>
+        <span class="section-count">(04)</span>
+      </div>
+      <div class="pill-row">
+        <span class="pill">Corporate Identity</span>
+        <span class="pill">Logo Design</span>
+        <span class="pill">Typography</span>
+        <span class="pill">Responsive Web</span>
+        <span class="pill">Accessibility</span>
+        <span class="pill">3D / AR</span>
+        <span class="pill">Motion</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-tagline">
+          Turning concepts into visuals,<br>
+          since 2019.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="../pages/resume.html">Resume</a>
+          <a href="../pages/contact.html">Contact Me</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <img src="../assets/img/instagram_bw.png" alt="Instagram" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <img src="../assets/img/linkedin_bw.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-logo-row">
+      <div class="footer-logo">A.B.DESIGN</div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
