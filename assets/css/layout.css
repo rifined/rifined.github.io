@@ -242,6 +242,38 @@
   background: #000;
 }
 
+@media (max-width: 900px) {
+  .hero-heading {
+    gap: 28px;
+  }
+
+  .hero-title {
+    font-size: 44px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-heading {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 14px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    white-space: normal; /* разрешаем перенос, чтобы текст не вылезал */
+  }
+
+  .hero-line {
+    width: 100%;
+    max-width: 340px;
+    flex: 0 0 auto;
+  }
+}
+
 /* FEATURED */
 .featured-projects {
   padding: 0 0 40px;
